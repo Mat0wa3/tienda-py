@@ -10,4 +10,16 @@ def read_root():
 @app.get("/api/v1/stores")
 def getStore():
     store = tienda.getStoreById(0)
-    return store["data"]
+    return store
+
+@app.post("/api/v1/stores")
+def createStore():
+    storeData = {
+        "id": 0,
+        "cityID": 0,
+        "sufix": "Bello",
+        "address": "CRA 80a #112-56"
+    }
+
+    res = tienda.createStore(storeData)
+    return res

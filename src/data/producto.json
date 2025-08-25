@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "nombre": "Laptop Lenovo",
+    "descripcion": "Laptop con 16GB RAM y 512GB SSD",
+    "precio_unitario": 3500,
+    "id_proveedor": 2
+  },
+  {
+    "id": 2,
+    "nombre": "Mouse Gamer",
+    "descripcion": "Mouse RGB con 6 botones",
+    "precio_unitario": 120,
+    "id_proveedor": 1
+  }
+]

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <div id="createProductsModal" class="fixed inset-0 items-center justify-center z-50 hidden overflow-x-auto">
+        <div class="bg-gray-700 w-3/5 h-3/5 mb-40 rounded-lg shadow-lg p-6 relative">
+            <button onclick="closeModal('createProductsModal')"
+                class="absolute top-2 right-2 text-gray-200 hover:text-black text-2xl font-bold cursor-pointer">
+                ×
+            </button>
+
+            <h2 class="text-3xl font-semibold mb-4 text-blue-300">Nuevo</h2>
+            <form action="" class="mt-5 flex flex-col gap-4">
+                <input class="p-2  rounded-xl w-full bg-gray-900 border border-blue-900 text-gray-300" type="text" name="Referencia" placeholder="Referencia">
+                <input class="p-2  rounded-xl w-full bg-gray-900 border border-blue-900 text-gray-300
+                " type="text" name="Nombre" placeholder="Nombre">
+                <input class="p-2  rounded-xl w-full bg-gray-900 border border-blue-900 text-gray-300
+                " type="text" name="Descripción" placeholder="Descripción">
+                <input class="p-2  rounded-xl w-full bg-gray-900 border border-blue-900 text-gray-300" type="number" name="ValorUnitario" placeholder="Valor unitario">
+            </form>
+            <br>
+            <div class="flex justify-end">
+                <button onclick="closeModal('createProductsModal')"
+                    class="bg-blue-700 text-gray-100 px-4 py-2 rounded-xl hover:bg-blue-800 mr-2 cursor-pointer hover:scale-110">Cancelar</button>
+                <button onclick="showAlert('crear')"
+                    class="bg-blue-400 text-white px-4 py-2 rounded-xl hover:bg-blue-600 cursor-pointer hover:scale-110">Crear</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="editProductsModal" class="fixed inset-0 items-center justify-center z-50 hidden ">
+        <div class="bg-gray-700 w-3/5 h-3/5 mb-40 rounded-lg shadow-lg p-6 relative">
+            <button onclick="closeModal('editProductsModal')"
+                class="absolute top-2 right-2 text-gray-200 hover:text-black text-xl font-bold cursor-pointer">
+                ×
+            </button>
+
+            <h2 class="text-3xl font-semibold mb-4 text-blue-300">Editar</h2>
+            <form action="" class="mt-5 flex flex-col gap-4">
+                <input class="p-2  rounded-xl w-full bg-gray-900 border border-blue-900 text-gray-300
+                " type="text" name="Referencia" placeholder="Referencia" readonly>
+                <input class="p-2  rounded-xl w-full bg-gray-900 border border-blue-900 text-gray-300
+                " type="text" name="Nombre" placeholder="Nombre">
+                <input class="p-2  rounded-xl w-full bg-gray-900 border border-blue-900 text-gray-300
+                " type="text" name="Descripción" placeholder="Descripción">
+                <input class="p-2  rounded-xl w-full bg-gray-900 border border-blue-900 text-gray-300
+                " type="number" name="ValorUnitario" placeholder="Valor Unitario">
+            </form>
+            <br>
+            <div class="flex justify-end">
+                <button onclick="closeModal('editProductsModal')"
+                    class="bg-blue-700 text-gray-200 px-4 py-2 rounded-xl hover:bg-blue-900 mr-2 cursor-pointer hover:scale-110">Cancelar</button>
+                <button onclick="showAlert('editar')"
+                    class="bg-blue-400 text-white px-4 py-2 rounded-xl hover:bg-blue-500 cursor-pointer hover:scale-110">Actualizar</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</html>
